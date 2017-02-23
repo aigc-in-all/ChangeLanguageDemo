@@ -1,0 +1,17 @@
+<resources>
+    <!-- MainActivity -->
+    <string name="label_main">首页</string>
+    <string name="main_btn_settings">设置</string>
+
+    <!-- SettingsActivity -->
+    <string name="label_settings">设置</string>
+    <string name="settings_general">通用</string>
+
+    <!-- SettingsGeneralActivity -->
+    <string name="label_settings_general">通用</string>
+    <string name="settings_language">多语言</string>
+
+    <!-- ChangeLanguageActivity -->
+    <string name="label_change_language">多语言</string>
+    <string name="change_language_btn_save">保存</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingRight="12dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:onClick="clickOnBack"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_toRightOf="@id/back"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:text="@string/label_change_language"/>
+
+        <Button
+            android:layout_width="64dp"
+            android:layout_height="28dp"
+            android:text="@string/change_language_btn_save"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:onClick="clickOnSave"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_bg_change_language_save"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

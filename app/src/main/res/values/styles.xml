@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="MMFullLineItem">
+        <item name="android:background">@drawable/preference_item_bg</item>
+    </style>
+
+    <style name="MMFontPreferenceLarge" parent="@android:style/TextAppearance">
+        <item name="android:layout_marginLeft">14dp</item>
+    </style>
+
+    <style name="MMFontPreferenceSummary">
+
+    </style>
+
+</resources>

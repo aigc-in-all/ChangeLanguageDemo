@@ -1,0 +1,17 @@
+<resources>
+    <!-- MainActivity -->
+    <string name="label_main">Main</string>
+    <string name="main_btn_settings">Settings</string>
+
+    <!-- SettingsActivity -->
+    <string name="label_settings">Settings</string>
+    <string name="settings_general">General</string>
+
+    <!-- SettingsGeneralActivity -->
+    <string name="label_settings_general">General</string>
+    <string name="settings_language">Language</string>
+
+    <!-- ChangeLanguageActivity -->
+    <string name="label_change_language">Language</string>
+    <string name="change_language_btn_save">Save</string>
+</resources>

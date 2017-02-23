@@ -1,0 +1,17 @@
+<resources>
+    <!-- MainActivity -->
+    <string name="label_main">ホーム</string>
+    <string name="main_btn_settings">セットアップ</string>
+
+    <!-- SettingsActivity -->
+    <string name="label_settings">セットアップ</string>
+    <string name="settings_general">一般的な</string>
+
+    <!-- SettingsGeneralActivity -->
+    <string name="label_settings_general">一般的な</string>
+    <string name="settings_language">多言語対応</string>
+
+    <!-- ChangeLanguageActivity -->
+    <string name="label_change_language">多言語対応</string>
+    <string name="change_language_btn_save">保存</string>
+</resources>
