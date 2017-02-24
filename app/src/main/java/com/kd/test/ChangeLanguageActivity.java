@@ -29,7 +29,7 @@ public class ChangeLanguageActivity extends AppCompatActivity implements Adapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_change_language);
 
-        adapter = new LanguagesAdapter(this, LanguageHelper.getSupportedLanguages(), LanguageHelper.getCurrentLanguage());
+        adapter = new LanguagesAdapter(this, AppLanguageManager.getSupportedLanguages(), AppLanguageManager.getCurrentLanguage());
         listView = (ListView) findViewById(R.id.list);
         listView.addHeaderView(createDividerView());
         listView.addFooterView(createDividerView());
@@ -44,7 +44,7 @@ public class ChangeLanguageActivity extends AppCompatActivity implements Adapter
             return;
         }
 
-        Language language = adapter.getItem(position);
+        AppLanguage language = adapter.getItem(position);
 
         adapter.setCurrentLanguage(language);
     }
@@ -54,8 +54,8 @@ public class ChangeLanguageActivity extends AppCompatActivity implements Adapter
     }
 
     public void clickOnSave(View view) {
-        Language language = adapter.getCurrentLanguage();
-        boolean b = LanguageHelper.updateLanguage(language);
+        AppLanguage language = adapter.getCurrentLanguage();
+        boolean b = AppLanguageManager.change(language);
         if (b) {
             Intent intent = new Intent(this, MainActivity.class);
             //  | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED | Intent.FLAG_ACTIVITY_MULTIPLE_TASK | Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET

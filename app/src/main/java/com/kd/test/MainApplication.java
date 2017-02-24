@@ -15,7 +15,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
-        LanguageHelper.init();
+        AppLanguageManager.init();
     }
 
     public static Context getContext() {
@@ -25,21 +25,6 @@ public class MainApplication extends Application {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-
-
-//        Resources res = MainApplication.getContext().getResources();
-//        Configuration config = res.getConfiguration();
-//        if (locale != null) {
-//            config.locale = locale;
-//            Locale.setDefault(locale);
-//            getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-//        }
-
-//        Configuration config = new Configuration(newConfig);
-//        config.locale = Language.parse(LanguageHelper.getCurrentLanguage());
-//        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-
-
-        System.out.println("MainApplication------>" + newConfig.locale);
+        AppLanguageManager.onConfigurationChanged(newConfig);
     }
 }

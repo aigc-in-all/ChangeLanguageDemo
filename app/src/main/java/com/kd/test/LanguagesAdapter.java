@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckedTextView;
-import android.widget.TextView;
 
 /**
  * Created by heqingbao on 2017/2/23.
@@ -14,21 +13,21 @@ import android.widget.TextView;
 public class LanguagesAdapter extends BaseAdapter {
 
     private Context context;
-    private Language[] languages;
-    private Language current;
+    private AppLanguage[] languages;
+    private AppLanguage current;
 
-    public LanguagesAdapter(Context context, Language[] languages, Language current) {
+    public LanguagesAdapter(Context context, AppLanguage[] languages, AppLanguage current) {
         this.context = context;
         this.languages = languages;
         this.current = current;
     }
 
-    public void setCurrentLanguage(Language language) {
+    public void setCurrentLanguage(AppLanguage language) {
         current = language;
         notifyDataSetChanged();
     }
 
-    public Language getCurrentLanguage() {
+    public AppLanguage getCurrentLanguage() {
         return current;
     }
 
@@ -38,7 +37,7 @@ public class LanguagesAdapter extends BaseAdapter {
     }
 
     @Override
-    public Language getItem(int position) {
+    public AppLanguage getItem(int position) {
         return languages[position];
     }
 
@@ -56,7 +55,7 @@ public class LanguagesAdapter extends BaseAdapter {
         }
 
         CheckedTextView textView = (CheckedTextView) convertView.getTag();
-        Language language = getItem(position);
+        AppLanguage language = getItem(position);
         textView.setText(getItem(position).desc());
         textView.setChecked(language == current);
 

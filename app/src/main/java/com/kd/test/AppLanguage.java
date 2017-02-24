@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 /**
  * Created by heqingbao on 2017/2/22.
  */
-public enum Language {
+public enum AppLanguage {
 
     AUTO("跟随系统", "", ""),
     CHINESE("简体中文", "zh", "CN"),
@@ -22,7 +22,7 @@ public enum Language {
     String language;
     String country;
 
-    private Language(String desc, String language, String country) {
+    private AppLanguage(String desc, String language, String country) {
         this.desc = desc;
         this.language = language;
         this.country = country;
@@ -41,9 +41,9 @@ public enum Language {
     }
 
     @NonNull
-    public static Language parse(@Nullable String locale) {
+    public static AppLanguage parse(@Nullable String locale) {
         if (locale == null || locale.isEmpty()) {
-            return Language.AUTO;
+            return AppLanguage.AUTO;
         }
 
         StringTokenizer token = new StringTokenizer(locale, ",");
@@ -57,26 +57,26 @@ public enum Language {
             country = (String) token.nextElement();
         }
 
-        for (Language l : Language.values()) {
+        for (AppLanguage l : AppLanguage.values()) {
             if (l.language().equals(language) && l.country.equals(country)) {
                 return l;
             }
         }
 
-        return Language.AUTO;
+        return AppLanguage.AUTO;
     }
 
     @NonNull
-    public static String toPersistenceString(@NonNull Language language) {
+    public static String toPersistenceString(@NonNull AppLanguage language) {
         return language.language() + "," + language.country();
     }
 
     @NonNull
-    public static Locale parse(Language language) {
-        if (language == null || language == Language.AUTO) {
+    public static Locale parse(AppLanguage l) {
+        if (l == null || l == AppLanguage.AUTO) {
             return Locale.getDefault();
         }
 
-        return new Locale(language.language, language.country());
+        return new Locale(l.language(), l.country());
     }
 }

@@ -24,7 +24,7 @@ public class SettingsGeneralActivity extends AppCompatActivity {
         setContentView(R.layout.act_settings_general);
 
         TextView textView = (TextView) findViewById(R.id.language);
-        textView.setText(LanguageHelper.getCurrentLanguage().desc());
+        textView.setText(AppLanguageManager.getCurrentLanguage().desc());
     }
 
     public void clickOnBack(View view) {

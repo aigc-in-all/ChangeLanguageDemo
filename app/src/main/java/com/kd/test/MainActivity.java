@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("------>onCreate");
+        System.out.println("MainActivity------>onCreate");
     }
 
     public void clickOnButton(View view) {
@@ -29,6 +29,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        System.out.println("------>onDestroy");
+        System.out.println("MainActivity------>onDestroy");
     }
 }
