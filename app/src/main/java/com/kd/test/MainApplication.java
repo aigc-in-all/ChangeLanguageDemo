@@ -26,6 +26,20 @@ public class MainApplication extends Application {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
 
-        System.out.println("MainApplication------>"  + newConfig.locale);
+
+//        Resources res = MainApplication.getContext().getResources();
+//        Configuration config = res.getConfiguration();
+//        if (locale != null) {
+//            config.locale = locale;
+//            Locale.setDefault(locale);
+//            getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+//        }
+
+//        Configuration config = new Configuration(newConfig);
+//        config.locale = Language.parse(LanguageHelper.getCurrentLanguage());
+//        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+
+
+        System.out.println("MainApplication------>" + newConfig.locale);
     }
 }

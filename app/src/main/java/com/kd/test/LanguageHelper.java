@@ -33,6 +33,8 @@ public class LanguageHelper {
                 config.locale = locale;
             }
             res.updateConfiguration(config, res.getDisplayMetrics());
+            Resources.getSystem().updateConfiguration(config, res.getDisplayMetrics());
+//            Locale.setDefault(locale);
             return true;
         } catch (Exception e) {
             return false;
