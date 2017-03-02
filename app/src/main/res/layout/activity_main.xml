@@ -1,38 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:paddingBottom="10dp"
     android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:background="@color/colorPrimary">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                android:text="@string/label_main"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_centerVertical="true"
-            android:textSize="16dp"
-            android:text="@string/label_main"/>
-    </RelativeLayout>
+            android:onClick="clickOnButton"
+            android:textAllCaps="false"
+            android:text="@string/main_btn_settings"/>
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="clickOnButton"
-        android:textAllCaps="false"
-        android:text="@string/main_btn_settings"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/flag"/>
+    </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/flag"/>
-</LinearLayout>
+        tools:text="@string/copyright"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="10dp"
+        android:layout_gravity="bottom"/>
+</RelativeLayout>
